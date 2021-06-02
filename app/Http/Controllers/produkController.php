@@ -57,7 +57,8 @@ class produkController extends Controller
             'jumlah' => $request['jumlah']
         ]);
 
-        return $this->index();
+        $produk = produk::get();
+        return view('index', ['data' => $produk]);
     }
 
     /**
@@ -108,7 +109,8 @@ class produkController extends Controller
             'jumlah' => $request['jumlah']
         ]);
 
-        return $this->index();
+        $produk = produk::get();
+        return view('index', ['data' => $produk]);
     }
 
     /**
@@ -120,5 +122,9 @@ class produkController extends Controller
     public function destroy($id)
     {
         //
+        DB::table('produk')->where('id', $id)->delete();
+
+        $produk = produk::get();
+        return view('index', ['data' => $produk]);
     }
 }

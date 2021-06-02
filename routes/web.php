@@ -22,3 +22,4 @@ Route::get('/create', 'produkController@create');
 Route::post('/create', 'produkController@store');
 Route::get('/update/{id}', 'produkController@edit');
 Route::post('/update/{id}', 'produkController@update');
+Route::get('delete/{id}', 'produkController@destroy');
