@@ -80,6 +80,8 @@ class produkController extends Controller
     public function edit($id)
     {
         //
+        $produk = DB::table('produk')->where('id', $id)->get();
+        return view('update', ['produk' => $produk]);
     }
 
     /**
@@ -92,6 +94,21 @@ class produkController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $this->validate($request, [
+            'nama-barang' => ['required'],
+            'keterangan' => ['required'],
+            'harga' => ['required'],
+            'jumlah' => ['required']
+         ]);
+
+         DB::table('produk')->where('id', $id)->update([
+            'nama_barang' => $request['nama-barang'],
+            'keterangan' => $request['keterangan'],
+            'harga' => $request['harga'],
+            'jumlah' => $request['jumlah']
+        ]);
+
+        return $this->index();
     }
 
     /**

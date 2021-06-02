@@ -25,7 +25,7 @@
               <td>{{ $produk['harga'] }}</td>
               <td>{{ $produk['jumlah'] }}</td>
               <td>
-                  <a href="" class="btn btn-sm btn-warning">Update</a>
+                  <a href="update/{{ $produk['id'] }}" class="btn btn-sm btn-warning">Update</a>
                   <a href="" class="btn btn-sm btn-danger">Hapus</a>
               </td>
             </tr>
