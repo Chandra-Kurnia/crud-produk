@@ -109,8 +109,7 @@ class produkController extends Controller
             'jumlah' => $request['jumlah']
         ]);
 
-        $produk = produk::get();
-        return view('index', ['data' => $produk]);
+        return redirect()->route('index');
     }
 
     /**
@@ -124,7 +123,6 @@ class produkController extends Controller
         //
         DB::table('produk')->where('id', $id)->delete();
 
-        $produk = produk::get();
-        return view('index', ['data' => $produk]);
+        return redirect()->route('index');
     }
 }

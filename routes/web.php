@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', 'produkController@index');
+Route::get('/', 'produkController@index')->name('index');
 Route::get('/create', 'produkController@create');
 Route::post('/create', 'produkController@store');
 Route::get('/update/{id}', 'produkController@edit');
