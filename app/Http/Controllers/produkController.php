@@ -47,18 +47,17 @@ class produkController extends Controller
             'harga' => ['required'],
             'jumlah' => ['required']
          ]);
-         $harga = $rp.$request['harga'];
+        $harga = $rp.$request['harga'];
 
-         //input to db
-         DB::table('produk')->insert([
+        //input to db
+        DB::table('produk')->insert([
             'nama_barang' => $request['nama-barang'],
             'keterangan' => $request['keterangan'],
             'harga' => $harga,
             'jumlah' => $request['jumlah']
         ]);
 
-        $produk = produk::get();
-        return view('index', ['data' => $produk]);
+        return redirect()->route('index');
     }
 
     /**
@@ -102,7 +101,7 @@ class produkController extends Controller
             'jumlah' => ['required']
          ]);
 
-         DB::table('produk')->where('id', $id)->update([
+        DB::table('produk')->where('id', $id)->update([
             'nama_barang' => $request['nama-barang'],
             'keterangan' => $request['keterangan'],
             'harga' => $request['harga'],
