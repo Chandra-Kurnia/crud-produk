@@ -1,1 +1,7 @@
-![img1](https://drive.google.com/file/d/1N5ZqYlOrGsdhHUT2qH1mYAOexEjoMMNe/view?usp=sharing?raw=true)
+![img1](https://github.com/Chandra-Kurnia/crud-produk/blob/master/public/img/create.png?raw=true)
+
+![img1](https://github.com/Chandra-Kurnia/crud-produk/blob/master/public/img/delete.png?raw=true)
+
+![img1](https://github.com/Chandra-Kurnia/crud-produk/blob/master/public/img/update.png?raw=true)
+
+![img1](https://github.com/Chandra-Kurnia/crud-produk/blob/master/public/img/home.png?raw=true)
